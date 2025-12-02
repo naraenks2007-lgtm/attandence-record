@@ -133,9 +133,8 @@ def get_students():
     students = [dict(row) for row in rows]
     conn.close()
     return jsonify(students)
-
-if __name__ == '__main__':
-   import os
-    port = int(os.environ.get("PORT",5000))
-app.run(host="0.0.0.0",port=port)
+if _name_ == "_main_":
+    import os
+    port = int(os.environ.get("PORT", 5000))
+    app.run(host="0.0.0.0", port=port)
 
